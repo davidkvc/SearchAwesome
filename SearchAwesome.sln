@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAwesome", "SearchAwesome\SearchAwesome.csproj", "{E7B4A4D7-C9E0-4BE7-BE9A-3675A8651978}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchAwesome", "SearchAwesome\SearchAwesome.csproj", "{E7B4A4D7-C9E0-4BE7-BE9A-3675A8651978}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A25A6096-D7D9-4E22-8A1F-FB373522D04B}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
