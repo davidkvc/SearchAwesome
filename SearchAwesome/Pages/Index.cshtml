@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<button id="reseedBtn">Reseed</button>
+
+<div>
+    Search
+    <input type="text"
+            name="q"
+           hx-post="/users/_search"
+           hx-trigger="input changed delay:250ms, search"
+           hx-target="#search-results"
+           hx-swap="outerHTML"
+           hx-indicator=".htmx-indicator" />
+    <span class="htmx-indicator">Loading...</span>
+</div>
+
+<ul id="search-results">
+    @foreach(var user in Model.Users)
+    {
+        <li>@user.Name</li>
+    }
+</ul>
+
+@section Scripts {
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script>
+        $('#reseedBtn').on('click', function() {
+            fetch('/api/reseed').then(() => {
+                window.location = window.location;
+            })
+        })
+    </script>
+}

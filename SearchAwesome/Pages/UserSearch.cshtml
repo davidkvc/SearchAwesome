@@ -1,0 +1,12 @@
+﻿@page "/users/_search"
+@model SearchAwesome.Pages.UserSearchModel
+@{
+    Layout = "";
+}
+
+<ul id="search-results">
+    @foreach (var user in Model.Users)
+    {
+        <li>@user.Name</li>
+    }
+</ul>
